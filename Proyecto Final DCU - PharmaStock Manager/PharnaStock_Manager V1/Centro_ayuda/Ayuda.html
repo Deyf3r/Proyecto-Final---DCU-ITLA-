@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PharmaStock Manager - Centro de Ayuda</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #4CAF50;
+      padding: 1em;
+      text-align: center;
+      color: white;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+        text-align: center;
+    }
+    
+    h2 {
+      color: #4CAF50;
+    }
+    h3 {
+      color: #4CAF50;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+    .feedback-buttons {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .feedback-buttons button {
+      margin-right: 10px;
+      padding: 10px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      
+    }
+
+    .feedback-message {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .satisfactory {
+      color: #4CAF50;
+    }
+
+    .unsatisfactory {
+      color: #FF5733;
+    }
+  </style>
+
+  <header>
+    <h1>PharmaStock Manager</h1>
+    <p>Centro de Ayuda</p>
+  </header>
+
+  <section>
+    <h2>Preguntas Frecuentes</h2>
+
+    <ul>
+      <li>
+        <strong>1. ¿Cómo agregar un nuevo producto?</strong>
+        <p>Para agregar un nuevo producto, inicie sesión en su cuenta y vaya a la sección "Productos". Haga clic en el botón "Agregar Producto" y complete el formulario con la información del producto.</p>
+      </li>
+
+      <li>
+        <strong>2. ¿Cómo realizar un seguimiento de las existencias?</strong>
+        <p>En la sección "Productos", encontrará una lista de todos los productos. Puede ver las existencias actuales y realizar ajustes haciendo clic en el producto correspondiente.</p>
+      </li>
+
+      <li>
+        <strong>3. ¿Cómo hago una nueva venta?</strong>
+        <p>Primero se tiene que digitar el código del producto, luego la cantidad y despues de eso ingresar el RUC/DNI del cliente. Por último se le da a imprimir para generar una factura.</p>
+      </li>
+      <li>
+        <strong>4. ¿Cómo generar un informe de ventas?</strong>
+        <p>Esto se realiza en la pestaña de "Ventas", seleccione una venta y luego haga clic en el boton que dice "PDF".</p>
+      </li>
+      <li>
+        <strong>5. ¿Cómo puedo ver un gráfico de las ventas?</strong>
+        <p>Solo tiene que ir a nueva venta, crear una venta y luego presionar el boton que tiene un gráfico de anillos.</p>
+      </li>
+      <li>
+        <strong>6. ¿Cómo puedo verificar los usuarios?</strong>
+        <p>Los usuarios se pueden verificar dandole clic al boton que dice "Usuarios", se le presentarán los datos de cada usuarios junto con su rol.</p>
+      </li>
+      <li>
+        <strong>7. ¿Cuál es el número de contacto de la empresa?</strong>
+        <p>Nuestro número de contacto es: Tel. +1(809)925-1523.</p>
+      </li>
+    </ul>
+
+    <h3>
+        <strong>¿La información le ha resultado satisfactoria?</strong>
+    </h3>
+
+    <div class="feedback-buttons">
+        <button onclick="giveFeedback('satisfactory')">Satisfactoria</button>
+        <button onclick="giveFeedback('unsatisfactory')">No Satisfactoria</button>
+      </div>
+    
+      <div class="feedback-message" id="feedbackMessage"></div>
+
+
+    
+
+
+      <script>
+        function giveFeedback(type) {
+          var messageElement = document.getElementById('feedbackMessage');
+    
+          if (type === 'satisfactory') {
+            messageElement.textContent = '¡Nos alegra que hayas encontrado útil la información! Gracias por tu retroalimentación.';
+            messageElement.classList.remove('unsatisfactory');
+            messageElement.classList.add('satisfactory');
+          } else if (type === 'unsatisfactory') {
+            messageElement.textContent = 'Lamentamos que la información no haya sido útil. Por favor, contáctanos para obtener ayuda adicional. Tel. +1(809)925-1523';
+            messageElement.classList.remove('satisfactory');
+            messageElement.classList.add('unsatisfactory');
+          }
+        }
+      function giveFeedback(type) {
+        var messageElement = document.getElementById('feedbackMessage');
+    
+        if (type === 'satisfactory') {
+          messageElement.textContent = '¡Nos alegra que hayas encontrado útil la información! Gracias por tu retroalimentación.';
+          messageElement.classList.remove('unsatisfactory');
+          messageElement.classList.add('satisfactory');
+        } else if (type === 'unsatisfactory') {
+          messageElement.textContent = 'Lamentamos que la información no haya sido útil. Por favor, contáctanos para obtener ayuda adicional. Tel. +1(809)925-1523';
+          messageElement.classList.remove('satisfactory');
+          messageElement.classList.add('unsatisfactory');
+        }
+      }
+    </script>
+  </section>
+  <footer>
+    <p>Todos los derechos reservados &copy; PharmaStock Manager</p>
+  </footer>
+
+  
+
+</body>
+</html>
